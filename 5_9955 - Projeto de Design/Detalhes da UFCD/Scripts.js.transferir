@@ -1,0 +1,332 @@
+﻿function toggle_visibility(id) {
+    var e = document.getElementById(id);
+    if (e.style.display == '')
+        e.style.display = 'block';
+    else
+        if (e.style.display == 'none')
+            e.style.display = 'block';
+        else
+            e.style.display = 'none';
+}
+
+function visibility_all(num) {
+    for (id = 1; id < num; id++) {
+        var e = document.getElementById(id);
+        if (e.style.display == 'none')
+            e.style.display = 'block';
+        else
+            e.style.display = 'none';
+    }
+}
+
+function showLayer(num) {
+
+    for (id = 1; id < num; id++) {
+        var targetElement = document.getElementById(id);
+        targetElement.style.display = 'block';
+        document.getElementById('a' + id).className = 'less';
+    }
+}
+
+function hideLayer(num) {
+    for (id = 1; id < num; id++) {
+        var targetElement = document.getElementById(id);
+        targetElement.style.display = 'none';
+        document.getElementById('a' + id).className = 'more';
+
+    }
+}
+
+function getRef(obj) {
+    return (typeof obj == "string") ?
+        document.getElementById(obj) : obj;
+}
+
+function toggleClassName(obj, class1, class2) {
+    obj = getRef(obj);
+    if (!obj.isClass1) {
+        obj.className = class1;
+        obj.isClass1 = true;
+    }
+    else {
+        obj.className = class2;
+        obj.isClass1 = false;
+    }
+}
+
+function doSubmit(page, formName) {
+    try {
+        var form = document.getElementById(formName);
+        form.Page.value = page;
+        form.submit();
+
+    } catch (e) {;
+    }
+}
+
+function doSubmitPerPage(perPage, formName) {
+    try {
+        
+        var form = document.getElementById(formName);
+        form.CurrentPerPage.value = perPage;
+
+        form.Page.value = 1;
+        form.submit();
+
+    } catch (e) {
+        alert(e.message);
+    }
+}
+
+
+
+function getIdDropDownListOpcoesParciais(id) {
+    var UfcdIdOption = document.getElementById("QualificacoesParciaisId").options[document.getElementById("QualificacoesParciaisId").selectedIndex].value
+    
+    document.getElementById("hiddenQualificacoesParciaisId").value = UfcdIdOption;
+}
+
+function getIdDropDownListOpcoes(id) {
+    document.getElementById("hiddenBolsaId").value = id;
+}
+
+function associaBolsasUFCD(idUfcd, idQualificacoes) {
+    document.getElementById("hiddenUfcdId").value = idUfcd;
+    document.getElementById("hiddenQualificacoesId").value = idQualificacoes;
+    document.associaBolsasUFCDForm.submit();
+}
+
+function associaParciaisUFCD(UfcdId) {
+    //var UfcdIdOption = document.getElementById("QualificacoesParciaisId").options[document.getElementById("QualificacoesParciaisId").selectedIndex].value;
+    /*
+    if (document.getElementById("hiddenQualificacoesParciaisId").value == '' || document.getElementById("hiddenQualificacoesParciaisId").value == '0' || document.getElementById("hiddenQualificacoesParciaisId").value == undefined) {
+        alert("É necessário indicar a Qualificação Parcial");
+    } else {
+    */
+        var UfcdIdOption = document.getElementById("QualificacoesParciaisId").options[document.getElementById("QualificacoesParciaisId").selectedIndex].value
+        document.getElementById("hiddenQualificacoesParciaisId").value = UfcdIdOption;
+
+        document.getElementById("hiddenUfcdId").value = UfcdId;
+        document.associaParciaisUFCDForm.submit();
+    //}
+}
+
+function criarNovaQualificacaoParcialJs() {
+    document.criarNovaQualificacaoParcialForm.submit();
+    desaparecerQualificacaoParcial();
+}
+
+function desaparecerEditarBolsaUc() {
+    document.getElementById('editarBolsaDiv').style.display = 'none';
+}
+
+function editarBolsaUc(QualificacoesId, Page, BolsasUcId)
+{
+    document.getElementById('editarQualificacoesId').value = QualificacoesId;
+    document.getElementById('editarPage').value = Page;
+    document.getElementById('editarBolsasUcId').value = BolsasUcId;
+}
+
+function criarNovaBolsaJs() {
+    document.criarNovaBolsaForm.submit();
+    desaparecer();
+}
+
+function criarNovaBolsaUcJs() {
+    document.criarNovaBolsaUcForm.submit();
+    desaparecer();
+}
+
+function mostraCriarNovaBolsa(idQualificacoes) {
+    document.getElementById("hiddenQualificacoesId").value = idQualificacoes;
+}
+
+function aparecerQualificacaoParcial() {
+    var e = document.getElementById("criarNovaQualificacaoParcialDiv");
+    e.style.display = '';
+
+    var e1 = document.getElementById("linkCriarNovaQualificacaoParcialDiv");
+    e1.style.display = 'none';
+}
+
+function desaparecerQualificacaoParcial() {
+    var e = document.getElementById("criarNovaQualificacaoParcialDiv");
+    e.style.display = 'none';
+
+    var e1 = document.getElementById("linkCriarNovaQualificacaoParcialDiv");
+    e1.style.display = '';
+} 
+
+function aparecer() {
+    var e = document.getElementById("criarNovaBolsaDiv");
+    e.style.display = '';
+
+    var e1 = document.getElementById("linkCriarNovaBolsaDiv");
+    e1.style.display = 'none';
+}
+
+function desaparecer() {
+    var e = document.getElementById("criarNovaBolsaDiv");
+    e.style.display = 'none';
+
+    var e1 = document.getElementById("linkCriarNovaBolsaDiv");
+    e1.style.display = '';
+}
+
+function aparecer1() {
+    var e = document.getElementById("editarDuracaoBolsaDiv");
+    e.style.display = '';
+
+    var e1 = document.getElementById("linkEditarDuracaoBolsaDiv");
+    e1.style.display = 'none';
+}
+
+function desaparecer1() {
+    var e = document.getElementById("editarDuracaoBolsaDiv");
+    e.style.display = 'none';
+
+    var e1 = document.getElementById("linkEditarDuracaoBolsaDiv");
+    e1.style.display = '';
+}
+
+function editarDuracaoBolsaJs() {
+    document.editarDuracaoBolsaForm.submit();
+    desaparecer1();
+}
+
+function aparecerEB(idEdit, idLink) {
+    var e = document.getElementById(idEdit);
+    e.style.display = '';
+
+    var e1 = document.getElementById(idLink);
+    e1.style.display = 'none';
+}
+
+function desaparecerEB(idEdit, idLink) {
+    var e = document.getElementById(idEdit);
+    e.style.display = 'none';
+
+    var e1 = document.getElementById(idLink);
+    e1.style.display = '';
+}
+
+function editarBolsaJs(formName) {
+    var form = document.getElementById(formName);
+    form.submit();
+
+    //desaparecerEB();
+}
+
+
+function editarDominiosFormacoaJs(formName) {
+    var form = document.getElementById(formName);
+    form.submit();
+
+    //desaparecerEB();
+}
+
+
+function editarQualificacaoParcialJs(formName) {
+    var form = document.getElementById(formName);
+    form.submit();
+
+    //desaparecerEB();
+}
+
+function aparecerGerirOrdem() {
+    var e = document.getElementById("gerirOrdemDiv");
+    e.style.display = '';
+}
+
+function desaparecerGerirOrdem() {
+    var e = document.getElementById("gerirOrdemDiv");
+    e.style.display = 'none';
+}
+
+function ApagarUfcd() {
+    if (confirm("Seleccionou um registo para apagar. Tem a certeza que deseja continuar?")) 
+        return true;
+    else
+        return false;
+}
+function ApagarQualificacaoParcial() {
+    if (confirm("Seleccionou apagar a Qualificação Parcial. Tem a certeza que deseja continuar?")) 
+        return true;
+    else
+        return false;
+}
+
+
+function ApagarBolsa() {
+    if (confirm("Seleccionou uma bolsa para apagar. Tem a certeza que deseja continuar?"))
+        return true;
+    else
+        return false;
+}
+
+function ConfirmaOperacao() {
+    if (confirm("Confirma a operação?"))
+        return true;
+    else
+        return false;
+}
+
+// *********************************** Ordenação ************************
+
+function Field_up(lst) {
+    var x;
+
+    if (lst.selectedIndex > 0) {
+        for (x = 0; x < lst.length; x++) {
+            if (lst.options[x].selected == true) {
+                if (x > 0) {
+                    Field_swap(lst, x, x - 1);
+                }
+            }
+        }
+    }
+}
+
+function Field_down(lst) {
+    var x;
+    
+    if (lst.options[lst.length - 1].selected == false) {
+
+        for (x = lst.length - 1; x >= 0; x--) {
+            if (lst.options[x].selected == true) {
+                if (x < lst.length - 1) {
+                    Field_swap(lst, x, x + 1);
+                }
+            }
+        }
+    }
+}
+
+function Field_swap(lst, i, j) {
+    var t = '';
+    t = lst.options[i].text; lst.options[i].text = lst.options[j].text; lst.options[j].text = t;
+    t = lst.options[i].value; lst.options[i].value = lst.options[j].value; lst.options[j].value = t;
+    t = lst.options[i].selected; lst.options[i].selected = lst.options[j].selected; lst.options[j].selected = t;
+    t = lst.options[i].defaultSelected; lst.options[i].defaultSelected = lst.options[j].defaultSelected; lst.options[j].defaultSelected = t;
+}
+
+function SetFields(lst, lstSave) {
+    var t;
+    lstSave.value = ""
+    for (t = 0; t <= lst.length - 1; t++) {
+        lstSave.value += String(lst.options[t].value) + ",";
+    }
+    if (lstSave.value.length > 0) {
+        lstSave.value = lstSave.value.slice(0, -1);
+    }
+
+}
+
+function AnalisaForm(formElement, divGerirOrdem, lst, lstSave) {
+    var TudoOk = 1
+    if (TudoOk == 1) {
+        SetFields(lst, lstSave);
+        document.getElementById(formElement).submit();
+        divGerirOrdem.style.display = 'none';
+    }
+}

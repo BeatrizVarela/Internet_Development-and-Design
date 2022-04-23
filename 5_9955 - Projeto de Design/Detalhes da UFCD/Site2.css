@@ -1,0 +1,369 @@
+
+.arvoreSiteItemNivel1
+{
+    font-size:125%;
+	background-image:url(../Content/images/bullet_big.gif);
+	background-position:left top;
+	background-repeat:no-repeat;
+	padding-left:35px;
+	font-weight:bold;
+	margin-bottom:10px;
+	padding-top:5px;
+	border:0px dashed black;
+	
+}
+
+.arvoreSiteItemNivel2
+{
+	font-size:110%;
+	font-weight:bold;
+	margin:20px 0 10px 0;
+	padding-bottom:2px;
+	padding-left:35px;
+	text-align:justify;
+	
+	
+}
+
+.arvoreSiteItemNivel3
+{
+	padding-left:50px;
+	padding-bottom:10px;
+	
+}
+
+.arvoreSiteItemNivel4
+{
+	padding-left:70px;
+	padding-bottom:10px;
+	
+}
+
+.arvoreSiteItemNivel5
+{
+	padding-left:90px;
+	padding-bottom:10px;
+	
+}
+
+.arvoreSiteItemNivel6
+{
+	padding-left:110px;
+	padding-bottom:10px;
+	
+}
+
+.arvoreSiteItemNivel7
+{
+	padding-left:130px;
+	padding-bottom:10px;
+}
+
+
+.arvoreSiteItemNivel8
+{
+	padding-left:150px;
+	padding-bottom:10px;
+	
+}
+
+.arvoreSiteItemNivel9
+{
+	padding-left:170px;
+	padding-bottom:10px;
+	
+}
+
+.arvoreSiteItemNivel10
+{
+	padding-left:190px;
+	padding-bottom:10px;
+	
+}
+
+.arvoreSiteItemNivel11
+{
+	padding-left:210px;
+	padding-bottom:10px;
+	
+}
+
+.arvoreSiteItemNivel12
+{
+	padding-left:220px;
+	padding-bottom:10px;
+	
+}
+
+
+
+.aceso,.aceso a, .aceso a:link,.aceso a:visited,.aceso a:active
+{
+    font-weight:bold;
+    color:#111111;
+}
+
+.arvoreGeralItemNivel1
+{
+    /*font-weight:bold;
+	margin-top:20px;
+	margin-top:10px;*/
+	line-height:16px;
+	border:0px solid blue;
+	font-size:13px;
+}
+
+.arvoreGeralItemNivel2
+{
+    /*line-height:21px;
+      margin-top:15px;*/	
+    border:0px solid red;
+    line-height:12px;
+    font-size:13px;
+    /*margin-top:10px;*/
+}
+
+.arvoreGeralItemNivel3
+{
+    border:0px solid red;
+    line-height:12px;
+    font-size:13px;
+    list-style-type:none;
+}
+.arvoreGeralItemNivel4
+{
+    border:0px solid green;
+    line-height:10px;
+    font-size:13px;   
+    list-style-type:none;
+}
+
+.arvoreGeralItemNivel5
+{
+    border:0px solid pink;
+    line-height:10px;
+    font-size:13px;
+    margin-bottom:2px;
+    list-style-type:none;
+}
+
+
+
+.grupoSobre 
+    {
+        border:0px solid black;
+        display:inline-block;
+        width:100%;
+        margin-bottom:30px;
+    }
+    .grupoSobre .esquerda
+    {
+        float:left;
+        border:0px dashed blue;
+    }
+    .grupoSobre .direita
+    {
+        float:right;
+        border:0px dashed red;
+        width:700px;
+    }
+    .grupoSobre .titulo
+    {
+        font-weight:bold;
+    }
+    .grupoSobre .foto
+    {
+        border:0px dashed blue;
+        width:250px;
+        height:125px;
+        background: url(../Content/Images/homepage_SectionBG.gif) no-repeat top left;
+    }
+    
+    .grupoSobre img
+    {
+        border:0px solid black;
+        padding-top:15px;
+        margin-left:50px;
+    }
+    .grupoSobre .subTitulo
+    {
+        text-decoration:underline;
+    }
+    
+    .grupoSobre .texto
+    {
+    }
+    .grupoSobre .lerMaisItems
+    {
+        display:inline-block;   
+    }
+    .grupoSobre .lerMaisItem
+    {
+        margin-bottom:10px;
+        margin-top:10px;
+    }
+    
+    
+
+.colunas .colunaEsquerda
+{
+    float: left;
+    width: 470px;
+        
+}
+.colunas .colunaDireita
+{
+    float: right;
+    width: 470px;
+}
+.colunas .caixa
+{
+    border: 1px solid black;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+    
+.colunas .items
+{
+    
+    
+    border:0px solid blue;
+        
+}
+    
+.colunas .novosItems
+{
+    font-size: 12px;
+    padding-left: 20px;
+    padding-right:20px;
+    margin-top:20px;
+    border-top:1px solid black;
+    margin-bottom:30px;
+        
+}
+    
+.colunas .item
+{
+    clear:both;
+    border:0px solid blue;
+    display:inline-block;
+    width:100%;
+}
+    
+.colunas .notas
+{
+    font-size: 10px;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+    
+.colunas .itemPDF
+{
+    margin-top: 20px;
+    line-height: 20px;
+    background: url(../Content/Images/icon_pdf.gif) no-repeat top left;
+    padding-left: 20px;
+}
+    
+.colunas .itemWord
+{
+    margin-top: 20px;
+    line-height: 20px;
+    background: url(../Content/Images/icon_word.gif) no-repeat top left;
+    padding-left: 20px;
+}
+    
+    
+.colunas .titulo
+{
+    line-height: 20px;
+    background-color: #dddddd;
+    border-bottom: 1px solid black;
+    
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5px 10px;
+}
+
+.colunas .tituloDocumentos
+{
+    
+    font-size: 12px;
+    font-weight: bold;
+    margin-left:20px;
+    margin-top:40px;
+}
+
+
+.colunas .tituloInferior
+{ 
+ border-top: 1px solid black;   
+}
+.colunas .tituloColuna
+{
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+    
+.colunas .area
+{
+    line-height: 20px;
+    background-color: #aaaaaa;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 5px 10px;
+}
+    
+.colunas .item .alteracao
+{
+    font-weight:bold;
+}
+.colunas .item .descricao
+{
+    font-size:10px;
+    margin-bottom:10px;
+}
+.colunas .item .emvigor
+{
+    float:left;
+    margin-top:5px;
+    color:#555555;
+
+}
+.colunas .item .bte
+{
+    float:left;
+    margin-top:3px;
+    color:#555555;
+    margin-bottom:10px;
+       
+}
+.colunas .item .posInfo
+{
+    clear:both;
+}
+
+.colunas .item .ligacao
+{
+    float:right;
+    text-align:right;
+    margin-top:3px;
+       
+}
+.colunas .subTitulo
+{
+    font-weight:bold;
+    margin-left:50px;
+    padding-top:10px;
+        
+    padding-bottom:5px;
+    
+}
+    
+.colunas .subItem
+{
+    margin-left:70px;
+    margin-bottom:5px;
+    font-size:11px;
+}
