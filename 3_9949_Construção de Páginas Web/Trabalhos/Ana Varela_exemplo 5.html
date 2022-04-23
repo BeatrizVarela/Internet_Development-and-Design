@@ -1,0 +1,25 @@
+<html>
+	<head>
+		<title>Texto pré-formatado</title>
+	</head>
+	<body>
+		<pre>
+		#!/bin/csh
+		cd $SCR
+		cfs get mysrc.f:mycfsdir/mysrc.f
+		cfs get myinfile:mycfsdir/myinfile
+		fc -02 -o mya.out mysrc.f
+		mya.out
+		cfs save myoutfile:mycfsdir/myoutfile
+		rm *
+		</pre>
+		#!/bin/csh
+		cd $SCR
+		cfs get mysrc.f:mycfsdir/mysrc.f
+		cfs get myinfile:mycfsdir/myinfile
+		fc -02 -o mya.out mysrc.f
+		mya.out
+		cfs save myoutfile:mycfsdir/myoutfile
+		rm *
+	</body>
+</html>
